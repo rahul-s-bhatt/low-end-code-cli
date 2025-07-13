@@ -1,0 +1,16 @@
+low-end-code/
+├── src/
+│   ├── model.py
+│   ├── context.py
+│   ├── cli.py
+│   └── __init__.py
+├── demo/
+│   ├── main.py
+│   ├── utils.py
+│   └── .lec/
+├── models/
+│   └── Phi-3-mini-4k-instruct-q4.gguf
+├── README.md
+├── requirements.txt
+├── install.sh
+└── lec (CLI entry point)
