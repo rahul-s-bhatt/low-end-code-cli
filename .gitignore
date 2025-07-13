@@ -1,1 +1,30 @@
-models
+# Ignore Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore model weights, large binaries, etc.
+*.gguf
+*.bin
+*.pt
+*.ckpt
+*.onnx
+*.h5
+
+# Ignore compiled Python files and bytecode
+__pycache__/
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore .lec folder (used by low-end-code for sessions/cache)
+.lec/
+.lec/**
+
+# Ignore hidden folders (macOS and editor configs)
+.DS_Store
+.idea/
+.vscode/
+*.swp

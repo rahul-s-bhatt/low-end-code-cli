@@ -1,4 +1,3 @@
-
 # File: lec.py (CLI entry point for Windows/Linux)
 #!/usr/bin/env python3
 import sys
@@ -15,7 +14,7 @@ from src.cli import cli
 # Optional ASCII Banner
 banner = r"""
 ----------------------------------------------------------------------------------------------------------------------  
-                                Welcome to the Low End Code CLI preview!
+                                    Welcome to the Low End Code CLI preview!
 ----------------------------------------------------------------------------------------------------------------------  
 
 ██╗      ██████╗ ██╗    ██╗    ███████╗███╗   ██╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗     ██████╗██╗     ██╗

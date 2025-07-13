@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "🚀 Installing Low-End-Code..."
+echo "🚀 Installing Low-End-Code CLI..."
 
 # Create virtual environment if it doesn't exist
 if [ ! -d "venv" ]; then

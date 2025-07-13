@@ -1,0 +1,24 @@
+description: ''
+entry_points: []
+generated_summary:
+  classes: 0
+  functions: 0
+  modules: 12
+  score: 0
+ignore_paths:
+- venv
+- .venv
+- __pycache__
+- .git
+- node_modules
+language: ''
+project_name: ''
+structure:
+  demo:
+    files: 2
+    python: 2
+  src:
+    files: 9
+    python: 9
+test_paths:
+- tests/

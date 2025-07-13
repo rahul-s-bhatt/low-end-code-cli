@@ -3,3 +3,8 @@ click
 rich
 watchdog
 pathlib
+tree_sitter
+tree-sitter-languages
+pathspec
+types-PyYAML
+types-tree-sitter-languages

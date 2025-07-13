@@ -1,5 +1,5 @@
 @echo off
-echo 🚀 Installing Low-End-Code...
+echo 🚀 Installing Low-End-Code CLI...
 
 :: Create virtual environment if not exists
 if not exist venv (
