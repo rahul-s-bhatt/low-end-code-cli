@@ -1,10 +1,5 @@
 description: ''
 entry_points: []
-generated_summary:
-  classes: 0
-  functions: 0
-  modules: 12
-  score: 0
 ignore_paths:
 - venv
 - .venv
@@ -18,7 +13,7 @@ structure:
     files: 2
     python: 2
   src:
-    files: 9
-    python: 9
+    files: 10
+    python: 10
 test_paths:
 - tests/

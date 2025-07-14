@@ -26,7 +26,7 @@ class ProjectMetadata:
     def generate_from_context(self, context_map):
         languages = list(set(v.get("language", "") for v in context_map.values() if isinstance(v, dict)))
         structure = context_map.get("__structure__", {})
-        generated_summary = self._summarize_context_map(context_map)
+        # generated_summary = self._summarize_context_map(context_map)
 
         generated = {
             "project_name": self.root.name,
@@ -35,7 +35,7 @@ class ProjectMetadata:
             "test_paths": ["tests/"],
             "ignore_paths": ["venv", ".venv", "__pycache__", ".git", "node_modules"],
             "description": "",
-            "generated_summary": generated_summary,
+            # "generated_summary": generated_summary,
             "structure": structure 
         }
         self.save(generated)

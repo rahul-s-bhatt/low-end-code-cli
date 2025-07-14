@@ -1,4 +1,5 @@
 # File: src/cli.py
+import json
 import click
 from rich.console import Console
 from rich.syntax import Syntax
@@ -13,7 +14,7 @@ from .session_manager import SessionManager
 from rich.table import Table
 from .learn import LearnTracker
 from .project_metadata import ProjectMetadata
-
+from .lsp_diagnostics import LSPDiagnostics
 
 console = Console()
 
@@ -230,3 +231,23 @@ def learn(source, file):
         passed = click.confirm("Did the test pass?")
         tracker.log_test_feedback(file, passed)
     console.print("✅ Learning logged.", style="green")
+
+@cli.command()
+@click.argument("file", default=".")
+@click.option("--lang", default="python", help="Language to use for LSP (default: python)")
+def lsp_diagnostics(file, lang):
+    """Run LSP diagnostics on a file or directory"""
+    console.print(f"🔍 Running diagnostics for: {file} [lang={lang}]", style="blue")
+
+    diag = LSPDiagnostics(language=lang)
+    issues = diag.run(file)
+
+    if not issues:
+        console.print("✅ No issues found", style="green")
+    elif all("Pyright error" in i["message"] for i in issues):
+        console.print("⚠️ Pyright had trouble analyzing. Try specifying a single file:", style="yellow")
+        console.print("   lec lsp-diagnostics src/main.py", style="dim")
+    else:
+        for i in issues:
+            file_str = f"{i['file']}:{i['line']}" if i['file'] else "(unknown)"
+            console.print(f"🚨 {file_str} [{i['severity'].upper()}] {i['message']}", style="red")

@@ -8,3 +8,4 @@ tree-sitter-languages
 pathspec
 types-PyYAML
 types-tree-sitter-languages
+pyright

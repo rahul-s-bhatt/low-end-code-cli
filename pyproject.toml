@@ -1,2 +1,4 @@
-mypy src/
-ruff check src/
+[tool.pyright]
+typeCheckingMode = "basic"
+exclude = ["node_modules", "venv", ".venv", ".lec"]
+include = ["src", "demo"]
